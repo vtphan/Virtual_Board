@@ -25,11 +25,8 @@ def _load_jupyter_server_extension(server_app):
     server_app: jupyterlab.labapp.LabApp
         JupyterLab application instance
     """
-    url_path = "/api/v1"
-    setup_handlers(server_app.web_app, url_path)
-    server_app.log.info(
-        f"Registered jupyterlab_button extension at URL path /{url_path}"
-    )
+    setup_handlers(server_app.web_app)
+    server_app.log.info("Registered {name} server extension".format(**data))
 
 
 # For backward compatibility with the classical notebook
