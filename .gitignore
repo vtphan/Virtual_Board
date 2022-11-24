@@ -2,3 +2,4 @@
 /virtual_board_extension/node_modules
 /virtual_board_extension/.ipynb_checkpoints
 .DS_Store
+virtual_board_server/.DS_Store
