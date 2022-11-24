@@ -1,0 +1,5 @@
+node_modules
+**/node_modules
+**/lib
+**/package.json
+virtual_board_extension
