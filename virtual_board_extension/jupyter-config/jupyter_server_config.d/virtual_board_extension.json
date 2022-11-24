@@ -1,0 +1,7 @@
+{
+    "ServerApp": {
+        "jpserver_extensions": {
+            "virtual_board_extension": true
+        }
+    }
+}
