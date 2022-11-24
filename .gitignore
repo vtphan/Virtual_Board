@@ -1,0 +1,4 @@
+/virtual_board_extension/lib
+/virtual_board_extension/node_modules
+/virtual_board_extension/.ipynb_checkpoints
+.DS_Store
