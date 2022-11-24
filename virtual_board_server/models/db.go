@@ -13,7 +13,7 @@ func init() {
 }
 
 func InitDB() (*DB, error) {
-	db, err := sql.Open("sqlite3", "./sqlite.db")
+	db, err := sql.Open("sqlite3", "./Test1.db")
 	if err != nil {
 		return nil, err
 	}

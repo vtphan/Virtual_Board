@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/static/css/sample.css">
+
+
+    <script>
+        document.write('<div class="container">');
+        document.write('<li class="table-header">')
+        document.write('<div class="col col-1">Course name</div>')
+        document.write('<div class="col col-2">Created time</div>');
+        document.write('</li>');
+        var courses = ("{{.courseNames}}").split("&")
+        function UtcToIst(data) {
+            var dt = new Date(data);
+            return dt;
+        }
+        for (var i = 0; i < courses.length; i++) {
+            course = JSON.parse(courses[i])
+            console.log("course \n", course)
+            var c = course.coursename;
+            var crtDate = UtcToIst(course.created_at).toLocaleDateString();
+
+            document.write('<li class="table-row">')
+            document.write('<div class="col col-2"><a href={{.baseUrl }}' + course.coursename + '/notebooks/view' + '>' + course.coursename + '</a>' + '</div>' + '<div class="col col-2">' + crtDate + '</div>')
+        }
+        document.write('</li >');
+
+        document.write('</div >');
+
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>
